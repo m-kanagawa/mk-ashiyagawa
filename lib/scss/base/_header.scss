@@ -1,0 +1,229 @@
+/* 共通
+----------------------------------------------------*/
+/* スクロールバーの有無によるズレ対策 */
+html {
+  overflow-y: scroll;
+  font-size:62.5%;
+}
+body {
+  overflow: hidden;
+	background-color: $body_color;
+	
+	color: $color_text;
+	font-size: $base_font_size + rem;
+  font-family: $base_font_family;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  -webkit-font-feature-settings: "palt" 1;
+  font-feature-settings: "palt" 1;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+
+
+  .h_nav {display: block;}
+  .sp_side_nav {display: none;}
+  @media only screen and (max-width: $sp_width) {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .h_nav {display: none;}
+    .sp_side_nav {display: block;}
+  }
+}
+::selection {
+  background: $main_color;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*----------------------------------------------------
+  header
+----------------------------------------------------*/
+.header {
+	padding-bottom: 30px;
+	line-height: 1;
+	background: url("../img/share/bg_header.png") center center repeat;
+  .header_in {
+		display: flex;
+		align-items: center;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0;
+    .header_logo {
+			padding: 12px 0 0;
+		}
+		.header_nav {
+			// width: 40%;
+			margin-left: 2%;
+			margin-right: auto;
+		}
+		.header_tel {
+			margin-top: 15px;
+			text-align: center;
+			.pc-only {display: block !important;}
+			.sp-only {display: none !important;}
+			.text {
+				font-size: 1.1rem;
+				span {
+					display: inline-block;
+					padding: 3px 5px 4px;
+					margin-top: 10px;
+					margin-left: 3px;
+					background-color: #e06317;
+					color: #fff;
+				}
+			}
+		}
+  } //headerIn
+  @media only screen and (max-width: 1260px + 30px) {
+    .header_in {
+      padding: 0 15px;
+    }
+  }
+  @media only screen and (max-width: 1167px) {//navのブレイクに合わせている
+		padding-bottom: 20px;
+		.header_in {
+			.header_logo {
+				img {
+					max-width: 270px;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 960px - 1px) {
+		.header_in {
+			margin-right: 10%;
+			justify-content: space-between;
+		}
+	}
+  @media only screen and (max-width: 640px) {
+		padding-bottom: 0;
+		.header_in {
+      padding: 0 0;
+			margin-right: 0;
+			flex-direction: column;
+			.header_logo {
+				margin-right: auto;
+				padding-left: 10px;
+				img {
+					max-width: 200px;
+				}
+			}
+			.header_tel {
+				width: 100%;
+				background-color: #75705b;
+				color: #fff;
+				.pc-only {display: none !important;}
+				.sp-only {display: block !important;}
+				.tel {
+					position: absolute;
+					top: 8px;
+					right: 70px;
+					img {
+						max-width: 51px;
+					}
+				}
+				.text {
+					padding: 10px 10px 10px 15px;
+					font-size: 1.3rem;
+					text-align: right;
+					span {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+    .header_in {
+
+    }
+  }
+}
+
+//パンくずリスト
+.breadcrumbBox {
+	padding: 10px 0;
+	margin-bottom: 60px;
+	font-size: 1.3rem;
+	background-color: #f5f2eb;
+  ul.bread_crumb {
+    max-width: $base_width;
+    margin: 0 auto;
+    li {
+      display: inline-block;
+      &:first-child {
+      }
+      &:after {
+        content: '>';
+        padding-left: 6px;
+        margin-right: 0px;
+      }
+      a {
+        // margin-right: 7px;
+        color: $color_text;
+      }
+      &:last-child:after {
+        content: '';
+        padding-left: 0px;
+        margin-right: 0px;
+      }
+      br { display: none; }
+    }
+  }
+  @media only screen and (max-width: $base_width + 30px) {
+		padding: 10px 15px;
+		margin-bottom: 60px;
+  }
+  @media only screen and (max-width: $sp_width) {
+		margin-bottom: 40px;
+    font-size: 1.0rem;
+    ul.bread_crumb {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+// .breadcrumbBox {
+//   padding-top: 15px;
+//   margin: 0 0 60px;
+//   font-size: 1.3rem;
+//   ul.bread_crumb {
+//     max-width: $base_width;
+//     margin: 0 auto;
+//     li {
+//       display: inline-block;
+//       &:first-child {
+//       }
+//       &:after {
+//         content: '>';
+//         padding-left: 6px;
+//         margin-right: 0px;
+//       }
+//       a {
+//         // margin-right: 7px;
+//         color: $color_text;
+//       }
+//       &:last-child:after {
+//         content: '';
+//         padding-left: 0px;
+//         margin-right: 0px;
+//       }
+//       br { display: none; }
+//     }
+//   }
+//   @media only screen and (max-width: $base_width) {
+//     margin: 0 15px 60px;
+//   }
+//   @media only screen and (max-width: $sp_width) {
+//     margin: 0 15px 40px;
+//     font-size: 1.0rem;
+//     ul.bread_crumb {
+//       width: 100%;
+//     }
+//   }
+// }

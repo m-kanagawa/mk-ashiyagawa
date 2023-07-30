@@ -1,0 +1,148 @@
+// 検索フォーム
+//----------------------------------------------------
+
+.searchform_box {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid $main_color;
+  display: block;
+  padding: 0 10px;
+  border-radius: 3px;
+  height: 2.3em;
+  overflow: hidden;
+  input[type="text"] {
+    border: none;
+    height: 2.0em;
+    width: calc(100% - 3.5em);
+    &:focus {
+      outline: 0;
+    }
+  }
+  input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: $main_color;
+    color: #fff;
+    position: absolute;
+    width: 3.5em;
+    height: 3.0em;
+    right:0px;
+    top: -5px;
+    outline : none;
+  }
+}
+
+// SNS
+//----------------------------------------------------
+.share_button {
+  max-width: $base_width;
+  padding: 80px 0;
+  margin: auto;
+  @media screen and (max-width: $sp_width) {
+    width: 100%;
+    padding: 40px 15px;
+  }
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+
+@media screen and (max-width: $sp_width) {
+
+
+}
+
+// Instagram
+//----------------------------------------------------
+
+.insta_box {
+  max-width: 1500px;
+  margin: auto;
+  @media only screen and (max-width: $sp_width) {
+    margin: auto 15px;
+  }
+  .insta_list {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      position: relative;
+      width: calc(94% / 4);
+      margin-bottom: 1.5%;
+      margin-right: 2%;
+      &:nth-child(4n){
+        margin-right: 0;
+      }
+      @media only screen and (max-width: $sp_width) {
+        width: calc(96% / 3);
+        &:nth-child(4n){
+          margin-right: 2%;
+        }
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
+      a {
+        color: #fff;
+        .insta_img {
+          display: block;
+          overflow: hidden;
+          img {
+            display: block;
+            max-width: 100%;
+            transition-duration: 0.3s;
+          }
+        }
+        &:hover {
+          .insta_img {
+            img {
+              transform: scale(1.03);
+              transition-duration: 0.3s;
+              opacity: .8;
+            }
+          }
+        }
+      }
+      .insta_options {
+        position: absolute;
+        min-width: 80px;
+        bottom: 0;
+        padding: 5px 10px;
+        background-color: rgba(#000,.4);
+        .insta_likes {
+          display: inline-block;
+          margin-right: 10px;
+          &::before {
+            font-family:"FontAwesome";
+            content:"\f004";
+            margin-right: 5px;
+            // float: left;
+            // display: block;
+            display: inline-block;
+          }
+        }
+        .insta_comments {
+          &::before {
+            font-family:"FontAwesome";
+            content:"\f075";
+            margin-right: 5px;
+            // float: left;
+            // display: block;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 印刷用CSS
+//----------------------------------------------------
+@media print {
+
+}

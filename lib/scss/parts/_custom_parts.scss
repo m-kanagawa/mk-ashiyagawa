@@ -1,0 +1,439 @@
+
+/* カスタムパーツ
+----------------------------------------------------*/
+
+
+// 単体パーツの見出しと本文テキストのマージン調整
+// body main {
+// 	.custom_content {
+// 		.style_ttl_pin,
+// 		.custom_txt {
+// 			margin-left: 15px;
+// 			margin-right: 15px;
+// 			@media (min-width: $sp_width) {
+// 				margin-left: 15px;
+// 				margin-right: 15px;
+// 			}
+// 			@media (min-width: 1024px) {
+// 				margin-left: 0;
+// 				margin-right: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+// 単体パーツの見出しと本文テキストのマージン調整
+body main {
+	.custom_content {
+		.style_ttl_pin,
+		.custom_txt_pin,
+		.custom_google_map {
+			margin-left: 15px;
+			margin-right: 15px;
+			@media (min-width: 1024px) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+body main {
+	.custom_content {
+		table.normal_table,
+		table.menu_table {
+			margin-left: 15px;
+			margin-right: 15px;
+			width: calc(100% - 30px);
+			@media (min-width: 1024px) {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.custom_content {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.custom_txt {//本文
+		margin-bottom: 40px;
+	}
+	ol,ul:not(.imgs-block) {
+		margin-left: 30px;
+		margin-bottom: 1em;
+		li {
+		}
+	}
+	ul {list-style-type: disc;}
+	ol {list-style-type: decimal;}
+	p {
+		margin-bottom: 10px;
+	}
+	table {
+	  width: 100%;
+	  // margin-bottom: 1em;
+	  caption {
+	    margin-bottom: 0.5em;
+	    text-align: center;
+	    font-size: 1.6rem;
+	  }
+	  // th, td {
+	  //   border: 1px solid $color_schedule_border;
+	  //   padding: 10px;
+	  //   text-align: center;
+	  // }
+	  // thead th {
+	  //   background: $color_schedule_thead_bg;
+	  //   color: $color_schedule_thead_text;
+	  // }
+	  // tbody th {
+	  //   background: $color_schedule_tbody_th_bg;
+	  // }
+	  // td {
+	  //   background: $color_schedule_td_bg;
+	  //   text-align: left;
+	  // }
+	}
+	.alignright {
+		text-align: right;
+	}
+	.alignleft {
+		text-align-last: auto;
+	}
+	.aligncenter {
+		text-align: center;
+	}
+}
+.custom_content {
+	table.menu_table {
+		width: 100%;
+		margin-bottom: 80px;
+		tr{
+			&:first-child {
+				th,td {
+					padding-top: 0;
+					word-break: break-all;
+				}
+			}
+			th {
+				text-align: left;
+				padding-top: 20px;
+				border-bottom: 1px solid $sub_color;
+			}
+			td {
+				text-align: right;
+				border-bottom: 1px solid $sub_color;
+				padding-top: 20px;
+				// min-width: 130px;
+				&.td_cp2 {
+					font-size: 1.3rem;
+					padding-top: 6px;
+					border-bottom: none;
+					text-align: left;
+					p {margin-bottom: 0;}
+				}
+			}
+		}
+	}
+}
+.custom_content {
+	table.normal_table {
+		width: 100%;
+		margin-bottom: 20px;
+		border-collapse: collapse;
+		tr{
+			th,td {
+				padding: 10px 20px;
+				word-break: break-all;
+			}
+			th {
+				color: #757575;
+				width: 30%;
+				text-align: left;
+				//padding-top: 20px;
+				font-weight: normal;
+				background-color: #dfdfdf;
+				border: 1px solid #c0c0c0;
+				vertical-align: middle;
+			}
+			td {
+				//padding-top: 20px;
+				// min-width: 130px;
+				border: 1px solid #c0c0c0;
+				&.td_cp2 {
+					font-size: 1.3rem;
+					padding-top: 6px;
+					border: 1px solid #c0c0c0;
+					text-align: left;
+					p {margin-bottom: 0;}
+				}
+			}
+			@media only screen and (max-width: $sp_width) {
+				th,td {
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+.custom_content {
+	.table_notes {
+		display: none;
+		@media only screen and (max-width: $sp_width) {
+			display: block;
+			margin: 20px 0 10px;
+			text-align: center;
+			color: #999;
+		}
+	}
+	.custom_table_scroll {
+		overflow: auto;//tableをスクロールさせる
+		margin-bottom: 20px;
+		@media only screen and (max-width: $sp_width) {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		table.custom_table {
+			width:100%;
+			margin-bottom: 20px;
+			tr {
+				th {
+					width: auto;
+				}
+			}
+		}
+	}
+	.custom_table_scroll::-webkit-scrollbar{//tableにスクロールバーを追加
+		height: 10px;
+	}
+	.custom_table_scroll::-webkit-scrollbar-track{//tableにスクロールバーを追加
+		background: #F1F1F1;
+	}
+	.custom_table_scroll::-webkit-scrollbar-thumb {//tableにスクロールバーを追加
+		background: #BCBCBC;
+	}
+}
+.custom_content {
+	.list-block {
+		margin-bottom: 20px;
+		ul {
+			//background: #fff;
+			//border: #808080 1px solid;
+			padding: 0 30px 0 25px;
+			list-style-type: disc
+		}
+		ol {
+			//background: #fff;
+			//border: #808080 1px solid;
+			padding: 0 30px 0 60px;
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+		ul.check {
+			list-style: none;
+			//background: #fff;
+			//border: #808080 1px solid;
+			padding: 0 30px;
+			li {
+				//background: url(../images/common/list-icon-01.png) no-repeat left 4px;
+				&:before {
+					font-size: 2.2rem;
+					font-family:"FontAwesome";
+					content:"\f046";
+					margin-right: 7px;
+					color: $main_color;
+					top: 3px;
+					position: relative;
+				}
+			}
+		}
+	}
+}
+
+.custom_content { //画像
+	.custom_img {
+		margin-bottom: 30px;
+	}
+}
+
+.custom_content { //画像(複数)
+	.imgs-block {
+		margin-bottom: 30px;
+		text-align: center;
+		list-style: none;
+		letter-spacing: -.4em;
+		li {
+			width: 48%;
+			margin-right: 4%;
+			display: inline-block;
+			letter-spacing: normal;
+			vertical-align: top;
+			&:last-child {margin-right: 0;}
+			.imgs-block-img {
+				margin-bottom: 5px;
+			}
+			.imgs-block-ttl,
+			.imgs-block-txt {
+				text-align: left;
+			}
+			.imgs-block-ttl {
+				font-weight: 600;
+				font-size: 1.5rem;
+				border-bottom: 1px solid $main_color;
+			}
+			.imgs-block-btn {
+				a {
+					display: inline-block;
+					min-width: 240px;
+					padding: 0.5em 1.8em;
+					background-color: $btn_color;
+					border-radius: 3px;
+					color: $btn_txt_color;
+					font-size: 1.6rem;
+					line-height: 1.42;
+					text-decoration: none;
+					box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+					-webkit-transition: background-color 0.35s,color 0.35s;
+					transition: background-color 0.35s,color 0.35s;
+					letter-spacing: 2px;
+					&:hover {
+						border-radius: 5px;
+						background:lighten( $btn_color, 15% );
+						-webkit-transition: background-color 0.35s,color 0.35s;
+						transition: background-color 0.35s,color 0.35s;
+					}
+				}
+			}
+		}
+		&.set-3 li {
+			width: 31%;
+			margin-right: 3.5%;
+			&:last-child {margin-right: 0;}
+		}
+		&.set-4 li {
+			width: 23%;
+			margin-right: 2.666666666666667%;
+			&:last-child {margin-right: 0;}
+		}
+	}
+	@media only screen and (max-width: $sp_width) {
+		.imgs-block {
+      margin-left: 15px;
+      margin-right: 15px;
+			li {
+				display: inline-block;
+        &:last-child {margin-right: 0;}
+        .imgs-block-img {
+          margin-bottom: 10px;
+        }
+				.imgs-block-btn {
+					a {
+						min-width: 0;
+						padding: 0.5em 0.5em;
+						font-size: 1.4rem;
+					}
+				}
+			}
+			&.imgs-block-sp-tate {
+				li {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+			&.imgs-block-sp-tate2 {
+				li {
+					width: 49%;
+					margin-right: 2%;
+					margin-bottom: 20px;
+					&:nth-child(2n) {
+						margin-right: 0;
+					}
+					&:last-child,
+					&:nth-child(3) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//動画埋め込み
+.custom_video {
+	position: relative;
+	width: 80%;
+	margin: 0 auto 30px;
+	padding-top: 50.25%;
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+	@media only screen and (max-width: $sp_width) {
+		width: 100%;
+		padding-top: 56.25%;
+	}
+}
+//GoogleMap埋め込み
+.custom_google_map {
+	margin: 0 auto 30px;
+	iframe {
+		width: 100%;
+	}
+}
+
+.custom_anchor_link_text {
+	a {
+		display: inline-block;
+		padding: 5px 10px;
+		margin: 0 10px 10px;
+		background-color: $main_color;
+		border-radius: 3px;
+		color: #fff;
+		text-decoration: none;
+		transition: 0.3s;
+		&:hover {
+			background-color: rgba($main_color,.8);
+		}
+	}
+}
+
+
+/* スマホ用
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: $sp_width) {
+	.custom_content {
+
+		table.menu_table {
+			font-size: 1.3rem;
+			tr{
+				td {
+					&.td_cp2 {
+						font-size: 1.2rem;
+						padding-top: 5px;
+					}
+				}
+			}
+		}
+		//画像(複数)
+
+	}
+
+
+
+
+
+
+
+
+}

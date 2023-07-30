@@ -1,0 +1,106 @@
+
+/* table
+----------------------------------------------------*/
+
+table:not(.table_schedule):not(.teble_no_style) {
+		width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	tr{
+		th,td {
+			padding: 10px 20px;
+			word-break: break-all;
+		}
+		th {
+			color: #757575;
+			width: 30%;
+			text-align: left;
+			//padding-top: 20px;
+			font-weight: normal;
+			background-color: #f7f5f0;
+			border: 1px solid #ccc;
+			vertical-align: middle;
+		}
+		td {
+			border: 1px solid #ccc;
+		}
+		@media only screen and (max-width: $sp_width) {
+			th,td {
+				padding: 10px;
+			}
+		}
+		@media only screen and (max-width: 425px) {
+			th,td {
+				// padding: 5px;
+				// font-size: 1.2rem;
+			}
+		}
+	}
+	&.table_fee {
+		th,td {
+			width: 50%;
+		}
+		td {
+			text-align: right;
+		}
+		@media only screen and (max-width: $sp_width) {
+			th,td {
+				display: block;
+				width: 100%;
+				border-bottom: none;
+			}
+			th {
+			}
+			td {
+				text-align: left;
+			}
+			tr:last-child {
+				td {
+					border-bottom: 1px solid #ccc;
+				}
+			}
+		}
+		@media only screen and (max-width: 374px) {
+			th,td {
+				// padding: 5px 2px;
+				// font-size: 1rem;
+			}
+		}
+	}
+}
+
+
+// 診療時間テーブル
+table.table_schedule {
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  caption {
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  th, td {
+    border: 1px solid $color_schedule_border;
+    padding: 5px;
+		text-align: center;
+		word-break: inherit;
+  }
+  thead th {
+    background: $color_schedule_thead_bg;
+    color: $color_schedule_thead_text;
+  }
+  tbody th {
+    background: $color_schedule_tbody_th_bg;
+  }
+  td {
+    background: $color_schedule_td_bg;
+  }
+}
+
+@media screen and (max-width: $sp_width) {
+
+
+
+}

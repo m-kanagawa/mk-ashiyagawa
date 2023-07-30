@@ -1,0 +1,99 @@
+@charset "utf-8";
+// ===================================================================
+// 設定
+// ===================================================================
+//アイコンフォント読み込み
+//Googlefont
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+// ======== fonts
+$base_font_size: 1.6; // rem
+
+// base
+$font_base_gothic: "Noto Sans JP", "-apple-system", BlinkMacSystemFont, "Helvetica Neue", Roboto, "Droid Sans", Arial, "Yu Gothic", YuGothic, Meiryo, sans-serif;
+
+$yugo_font: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+
+// 明朝
+$font_base_mincho: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$base_font_family: $font_base_gothic;
+
+$eng_font: 'Ubuntu', "Noto Sans JP", "-apple-system", BlinkMacSystemFont, "Helvetica Neue", Roboto, "Droid Sans", Arial, "Yu Gothic", YuGothic, Meiryo, sans-serif;
+
+$num_font: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+$faq_font: 'Judson', serif;
+//-----------------------サイズ--------------------------
+
+// ページ全体の横幅
+$base_width: 1160px;
+$main_width: 740px;
+$side_width: 240px;
+// スマホ表示幅
+$sp_width: 768px;
+$tb_width: 1024px;
+
+//レスポンシブ時の左右のスペース
+$content_space: 15px;
+
+
+//-----------------------カラー---------------------------
+
+$base_color: #fff;		// ベースカラー
+$main_color: #7e7966;	// メインカラー
+$sub_color: #808080;			//サブカラー
+$accent_color: #ff7011;// アクセントカラー
+$color_text: #434343;	//テキストカラー
+$color_text_reversal: #fff;
+$color_text_inverse: $color_text_reversal;
+
+$btn_txt_color: #fff;  //テキストカラー
+$btn_color: $main_color;  //テキストカラー
+
+$body_color: $base_color;
+$nav_color_bg: $main_color;   //グローバルナビゲーション　*グラデーション時は直接記述
+$nav_color_link: #5d563a; // Gナビリンクカラー
+$nav_color_link_hover: $nav_color_link; // Gナビリンクカラー(ホバー)
+$nav_color_bef: #ccc; // Gナビリンクカラー(ホバー)
+$footer_color: $main_color;
+
+$color_h1_text: #5d563a; // 下層h1テキスト色
+$color_h1_bg: $main_color;
+$color_h2_text: $color_text; // h2テキスト色
+$color_h2_border: $color_h2_text; // h2ボーダー色
+$color_h3_text: $color_text; // h3テキスト色
+$color_h4_text: $color_text; // h4テキスト色
+
+$bg_white: #fff;
+$bg_gray: #efefef;
+$bg_pink: #ffe1e1;
+$bg_blue: #e8e9ff;
+$bg_green: #edffe8;
+
+
+//--------------------------------------------------
+
+$main_visual_width: 100%;
+
+// 診療時間
+$color_schedule_thead_bg: darken( $main_color, 20% ); // thead > th の背景色
+$color_schedule_thead_text: #fff; // thead > th の文字色
+$color_schedule_tbody_th_bg: lighten($color_schedule_thead_bg, 20%); // tbody > th の背景色
+$color_schedule_td_bg: #fff; // td の背景色
+$color_schedule_border: #efefef; // ボーダー色
+
+//-----------------------リンク---------------------------
+
+// ベースリンクカラー
+$link_color: $main_color;
+$link_color_visited: $color_text;
+$link_color_hover: #005bab;
+$link_color_active: $color_text;
+
+a {color: $color_text;}
+// a:link {}
+// a:visited {}
+a:hover {text-decoration: none;}
+// a:active {}

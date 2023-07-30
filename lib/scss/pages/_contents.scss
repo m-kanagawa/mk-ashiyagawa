@@ -1,0 +1,175 @@
+// ===================================================================
+// コンテンツエリア
+// ===================================================================
+
+/* コンテンツ共通
+----------------------------------------------------*/
+/* 12 COLUMN : RESPONSIVE GRID SYSTEM SPレイアウト */
+@media(max-width :767px){.sp_image_cols{&:not(.sp_col2):not(.sp_col3){.col{&:not(:last-child){margin-bottom:1em}figure{overflow:hidden;img{float:left;width:32%;margin-bottom:10px;vertical-align:middle}figcaption{float:right;width:66%;margin-top:0;vertical-align:middle}}}}&.sp_col2{.col{width:49%;&:nth-child(odd){clear:both;float:left}&:nth-child(even){float:right}}}&.sp_col3{.col{float:left;width:32%;&:nth-child(3n+1){clear:both;margin-right:2%}&:nth-child(3n){float:right}}}}}
+
+figcaption, figure {
+	text-align: center;
+}
+main {
+	// min-height: 711px;
+	// padding-bottom: 100px;
+}
+
+main > *:last-child,
+main > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child > *:last-child {
+	margin-bottom: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+//<a href="tel:">のリンクをPC表示時に無効
+@media(min-width: 768px) {
+  a[href^="tel:"]{
+    pointer-events: none;
+    text-decoration: none;
+    color: $color_text;
+  }
+}
+
+//アコーディオンメニューの親リンククリック無効
+.header_nav_list > li > a[href^="#"] {
+	pointer-events: none;
+}
+
+.inner {
+	max-width: $base_width;
+	margin: auto;
+	&.inner_pa {
+		@media only screen and (max-width: $base_width + 30px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+.floating_box {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	margin-top: 83px;
+	ul {
+		list-style: none;
+		li {
+			position: relative;
+			a {
+				overflow: hidden;
+				position: relative;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 182px;
+				padding: 14px 5px;
+				background-color: #45b178;
+				color: #fff;
+				text-decoration: none;
+				text-align: center;
+				writing-mode: vertical-rl;
+				text-orientation: upright;
+				&::after {
+					content: '';
+					position: absolute;
+					top: -100%;
+					left: 0;
+					z-index: -1;
+					width: 100%;
+					height: 100%;
+					transition: all .3s;
+				}
+				&:hover {
+					&::after {
+						top: 0;
+						background-color: #003b82;
+					}
+					// background-color: #4587b1;
+				}
+			}
+			img {
+				max-width: 50px;
+				margin-bottom: 10px;
+			}
+			&:nth-child(2) {
+				margin-top: 17px;
+				a {
+					background-color: #4587b1;
+					&:hover {
+						&::after {
+							// background-color: #45b178;
+						}
+					}
+				}
+			}
+			&.js-ani {
+				right: -60px;
+				transition-duration: .7s, .3s;
+				opacity: 0;
+				&.js-ani-on {
+					right: 0;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: $sp_width) {
+		top: auto;
+		bottom: 0;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		margin-top: 0;
+		.tel {
+			width: 20%;
+			text-align: center;
+			img {
+				width: 46px;
+			}
+		}
+		ul {
+			display: flex;
+			justify-content: flex-end;
+			width: 80%;
+			li {
+				position: static;
+				width: 50%;
+				a {
+					overflow: auto;
+					// display: inline-block;
+					min-height: auto;
+					padding: 5px 5px;
+					writing-mode: inherit;
+					letter-spacing: normal;
+				}
+				img {
+					max-width: 40px;
+					margin-bottom: 0;
+					margin-right: 3px;
+				}
+				&:nth-child(2) {
+					margin-top: 0;
+					img {
+						max-width: 33px;
+					}
+				}
+				&.js-ani {
+					right: 0;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
