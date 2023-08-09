@@ -111,6 +111,352 @@ ul.list_check {
 	}
 }
 
+
+//-------------------------------------
+// 訪問歯科検診
+//-------------------------------------
+.page-id-546 {
+	@media (max-width: $sp_width) {
+		.header .header_in .header_tel .text {
+			display: none;
+		}
+		.sec_page_top_in {
+			padding-top: 0;
+		}
+		ul.list_check li {
+			width: 100%;
+			font-weight: bold;
+			@include clamp_fontsize(13, 320, 992, 30);
+		}
+	}
+	.sec_page_top_in {
+		justify-content: center;
+	}
+	.page_home_visits_ttl {
+	}
+}
+
+.cta {
+	margin: 0 15px;
+	@media (min-width: $sp_width) {
+		margin: 0 0;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		max-width: 960px;
+		padding: min(5.3vw,36px);
+		margin: 0 auto min(5.3vw,36px);
+		background-color: #f7f5f0;
+		border-radius: 3px;
+		box-shadow: 0 0 8px #ccc, 0 0 2px #ccc;
+
+		@media (min-width: $sp_width) {
+			flex-direction: row;
+		}
+	}
+	.text {
+		width: 100%;
+		margin: 0 0 10px;
+		@include clamp_fontsize(20, 576, 992, 30);
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		span {
+			padding: 0 5px 3px 6px;
+			margin-right: 5px;
+			color: #fff;
+			@include clamp_fontsize(20, 576, 992, 30);
+			background-color: #7e7966;
+			// background: linear-gradient(transparent 60%, yellow 30%);
+		}
+		@media (min-width: $sp_width) {
+			width: 50%;
+			margin: 0;
+		}
+	}
+	.tel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin: 0 0 !important;
+		// padding: 0 40px;
+		// background-color: #45b178;
+		@include clamp_fontsize(28, 576, 992, 42);
+		line-height: 1;
+		font-weight: 700;
+		&-text {
+			display: block;
+			margin-top: 10px;
+			@include clamp_fontsize(14, 576, 992, 16);
+			font-weight: normal;
+			line-height: 1.4;
+		}
+		@media (min-width: $sp_width) {
+			width: 50%;
+			margin: 0 0 0 30px !important;
+		}
+		a {
+			color: #fff;
+		}
+		&-num {
+			&::before {
+				content: "\f095";
+				display: inline-block;
+				position: relative;
+				top: -3px;
+				margin-right: 5px;
+				font-family: "Font Awesome 5 Free";
+				@include clamp_fontsize(20, 576, 992, 30);
+				font-weight: 900;
+				line-height: 1;
+				transform: rotate(102deg);
+			}
+		}
+	}
+}
+
+.mk-btn01 {
+	text-align: center;
+	a {
+		display:inline-block;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		max-width: 375px;
+		padding: min(3.2vw,20px) 0px;
+		text-align:center;
+		box-sizing:border-box;
+		background: #43A047;
+		background: linear-gradient(to bottom, #66BB6A, #43A047);
+		border-color: #81C784;
+		border-width: 1px;
+		border-radius: 5px;
+		color: #fff;
+		font-weight: bold;
+		text-decoration:none;
+		box-shadow: 0 3px 0 #388e3c;
+		&::after {
+			content:'';
+			height:100%;
+			width:30px;
+			position:absolute;
+			top:-180px;
+			left:0;
+			background-color: #fff;
+			opacity:0;
+			transform: rotate(45deg);
+			animation: reflection 5s ease-in-out infinite;
+		}
+		.fa {margin-left:10px;}
+		&:hover {
+			opacity:0.8;
+		}
+	}
+	@media (min-width: $sp_width) {
+		a {
+			max-width: none;
+		}
+	}
+	@keyframes reflection {
+		0% { transform: scale(0) rotate(45deg); opacity: 0; }
+		80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+		81% { transform: scale(4) rotate(45deg); opacity: 1; }
+		100% { transform: scale(50) rotate(45deg); opacity: 0; }
+	}
+}
+
+.home-visits-price {
+	background-color: #f7f5f0;
+	padding: min(3vw,36px);
+	margin-bottom: min(10vw,80px);
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (min-width: $tb_width) {
+			flex-direction: row;
+		}
+	}
+	.is-brown {
+    width: 30px;
+    font-size: 1.7rem;
+		background-color: #ca9e6a;
+		padding: 5px 10px !important;
+    color: #fff;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.25em;
+    vertical-align: middle;
+    text-align: center;
+		&.sp-only {
+			writing-mode: horizontal-tb;
+		}
+	}
+	&__table {
+		width: 100%;
+		padding: 20px;
+		background-color: #fff;
+		table {
+			height: 100%;
+			margin-bottom: 0 !important;
+		}
+		th,td {
+			padding: 11px;
+			font-size: 1.2rem;
+			vertical-align: middle;
+		}
+		th {
+			width: auto !important;
+			background-color: #f6eee2 !important;
+			border-right: 1px solid #a0a0a0;
+		}
+		td {}
+		@media (min-width: $tb_width) {
+			width: calc(50% - 20px);
+			th,td {
+				font-size: 1.5rem;
+			}
+		}
+		&:nth-child(2) {
+			margin-top: 30px;
+			position: relative;
+			&::before,
+			&::after {
+				position: absolute;
+				content: "";
+				left: 50%;
+				transform: translateX(-50%);
+				background: #ca9e6a;
+			}
+			&::before {
+				top: -18px;
+				width: 23px;
+				height: 4px;
+			}
+			&::after {
+				top: -27px;
+				width: 4px;
+				height: 23px;
+			}
+			@media (min-width: $tb_width) {
+				margin-top: 0;
+				&::before,
+				&::after {
+					top: 50%;
+					transform: translate(0, -50%);
+				}
+				&::before {
+					left: -30px;
+				}
+				&::after {
+					left: -21px;
+				}
+			}
+		}
+	}
+	&__table {
+		&.table02 {
+			width: 100%;
+			padding: 0;
+			thead {
+				th {
+					background-color: #ca9e6a !important;
+					text-align: center !important;
+					color: #fff !important;
+				}
+			}
+			td {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.home-visits-cal {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	.text-box {
+		width: 100%;
+	}
+	figure {
+		width: 100%;
+		max-width: 300px;
+		margin: 20px auto 0;
+	}
+	@media (min-width: $sp_width) {
+		margin-bottom: 40px;
+		.text-box {
+			width: 68%;
+		}
+		figure {
+			width: 30%;
+		}
+	}
+}
+
+
+.footer {
+	.cta {display: none;}
+	@media (max-width: $sp_width) {
+		padding: 0 0 80px;
+		.cta {
+			display: block;
+			position: fixed;
+			bottom: 0;
+			z-index: 3;
+			width: 100%;
+			margin: 0;
+			&__inner {
+				flex-direction: row;
+				padding: 10px;
+				margin: 0;
+				border-radius: 0%;
+				box-shadow: none;
+			}
+			.text {
+				margin-bottom: 0;
+				font-size: 12px;
+				span {
+					padding: 0 3px 3px;
+					margin-right: 5px;
+					font-size: 12px;
+				}
+			}
+			.tel {
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				&-text {
+					display: inline-block;
+					margin-top: 5px;
+					font-size: 12px;
+				}
+				&-num {
+					font-size: 16px;
+					&::before {
+						font-size: 12px;
+					}
+				}
+			}
+			.mk-btn01 a {
+				padding: 5px 0;
+			}
+		}
+	}
+}
+
+//-------------------------------------
+// 訪問歯科検診 ここまで
+//-------------------------------------
+
 .sec_access01 {
 	padding-bottom: 80px;
 	@media only screen and (max-width: $sp_width) {
