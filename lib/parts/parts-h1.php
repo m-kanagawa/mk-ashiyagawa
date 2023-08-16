@@ -8,7 +8,7 @@
 			<?php endif; ?>
 			<figure><img src="<?php echo get_template_directory_uri(); ?>/lib/img/page/page_img_news.png" alt="<?php the_title(); ?>"></figure>
 		<?php elseif( is_page('home_visits') ) : ?>
-			<h1 class="page_home_visits_ttl"><img src="<?php echo get_template_directory_uri(); ?>/lib/img/page/page_home_visits_lp.jpg" class="pc-only" alt="訪問歯科診療"><img src="<?php echo get_template_directory_uri(); ?>/lib/img/page/page_home_visits_lp_sp.jpg" class="sp-only" alt="訪問歯科診療"></h1>
+			<h1 class="page_home_visits_ttl"><img src="<?php echo get_template_directory_uri(); ?>/lib/img/page/page_home_visits_lp.webp" class="pc-only" alt="訪問歯科診療"><img src="<?php echo get_template_directory_uri(); ?>/lib/img/page/page_home_visits_lp_sp.webp" class="sp-only" alt="訪問歯科診療"></h1>
 		<?php else:?>
 			<h1 class="page_ttl"><?php the_title(); ?></h1>
 		<figure><img src="<?php if(get_field('page_ttl_bg')): ?><?php the_field('page_ttl_bg'); ?><?php else:?><?php echo get_template_directory_uri(); ?>/lib/img/page/page_img.png<?php endif; ?>" alt="<?php the_title(); ?>"></figure>
